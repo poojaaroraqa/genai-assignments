@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:5173/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+    <script type="module" src="./User Story to Tests_files/client"></script>
+
+    
+    <link rel="icon" type="image/svg+xml" href="http://localhost:5173/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Story to Tests</title>
+  <script src="chrome-extension://ojkchikaholjmcnefhjlbohackpeeknd/ptk/ptkAgentAutomation.js"></script></head>
+  <body>
+    <div id="root"><div><style>
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+          background-color: #f5f5f5;
+          color: #333;
+          line-height: 1.6;
+        }
+
+        .container {
+          max-width: 95%;
+          width: 100%;
+          margin: 0 auto;
+          padding: 20px;
+          min-height: 100vh;
+        }
+
+        @media (min-width: 768px) {
+          .container {
+            max-width: 90%;
+            padding: 30px;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .container {
+            max-width: 85%;
+            padding: 40px;
+          }
+        }
+
+        @media (min-width: 1440px) {
+          .container {
+            max-width: 1800px;
+            padding: 50px;
+          }
+        }
+
+        .header {
+          text-align: center;
+          margin-bottom: 40px;
+        }
+
+        .title {
+          font-size: 2.5rem;
+          color: #2c3e50;
+          margin-bottom: 10px;
+        }
+
+        .subtitle {
+          color: #666;
+          font-size: 1.1rem;
+        }
+
+        .form-container {
+          background: white;
+          border-radius: 8px;
+          padding: 30px;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+          margin-bottom: 30px;
+        }
+
+        .jira-connect-form {
+          background: white;
+          border-radius: 8px;
+          padding: 30px;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+          margin-bottom: 20px;
+        }
+
+        .jira-row {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+
+        @media (min-width: 1024px) {
+          .jira-row {
+            grid-template-columns: 1.2fr 1fr 1fr auto;
+            align-items: end;
+          }
+        }
+
+        .jira-connect-btn {
+          background: #0f766e;
+          color: white;
+          border: none;
+          padding: 12px 24px;
+          border-radius: 6px;
+          font-size: 16px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: background-color 0.2s;
+          height: 46px;
+        }
+
+        .jira-connect-btn:hover:not(:disabled) {
+          background: #115e59;
+        }
+
+        .jira-connect-btn:disabled {
+          background: #94a3b8;
+          cursor: not-allowed;
+        }
+
+        .jira-status {
+          margin-top: 12px;
+          font-size: 14px;
+          color: #14532d;
+          font-weight: 600;
+        }
+
+        .stories-container {
+          background: white;
+          border-radius: 8px;
+          padding: 20px;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+          margin-bottom: 25px;
+        }
+
+        .stories-title {
+          font-size: 1.2rem;
+          color: #1f2937;
+          margin-bottom: 12px;
+        }
+
+        .story-row {
+          cursor: pointer;
+        }
+
+        .story-row:hover {
+          background: #ecfeff;
+        }
+
+        .story-badge {
+          background: #e2e8f0;
+          color: #334155;
+          border-radius: 999px;
+          padding: 4px 10px;
+          font-size: 12px;
+          font-weight: 600;
+        }
+
+        .form-group {
+          margin-bottom: 20px;
+        }
+
+        .form-label {
+          display: block;
+          font-weight: 600;
+          margin-bottom: 8px;
+          color: #2c3e50;
+        }
+
+        .form-input, .form-textarea {
+          width: 100%;
+          padding: 12px;
+          border: 2px solid #e1e8ed;
+          border-radius: 6px;
+          font-size: 14px;
+          transition: border-color 0.2s;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+          outline: none;
+          border-color: #3498db;
+        }
+
+        .form-textarea {
+          resize: vertical;
+          min-height: 100px;
+        }
+
+        .submit-btn {
+          background: #3498db;
+          color: white;
+          border: none;
+          padding: 12px 24px;
+          border-radius: 6px;
+          font-size: 16px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: background-color 0.2s;
+        }
+
+        .submit-btn:hover:not(:disabled) {
+          background: #2980b9;
+        }
+
+        .submit-btn:disabled {
+          background: #bdc3c7;
+          cursor: not-allowed;
+        }
+
+        .feature-btn {
+          background: #7c3aed;
+          color: white;
+          border: none;
+          padding: 12px 24px;
+          border-radius: 6px;
+          font-size: 16px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: background-color 0.2s;
+        }
+
+        .feature-btn:hover {
+          background: #6d28d9;
+        }
+
+        .action-buttons {
+          display: flex;
+          gap: 12px;
+          flex-wrap: wrap;
+        }
+
+        .feature-container {
+          background: white;
+          border-radius: 8px;
+          padding: 24px;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+          margin-bottom: 30px;
+        }
+
+        .feature-title {
+          font-size: 1.4rem;
+          color: #2c3e50;
+          margin-bottom: 8px;
+        }
+
+        .feature-subtitle {
+          color: #4b5563;
+          margin-bottom: 14px;
+        }
+
+        .feature-code {
+          background: #0f172a;
+          color: #e2e8f0;
+          border-radius: 8px;
+          padding: 16px;
+          overflow-x: auto;
+          font-family: Consolas, Monaco, monospace;
+          font-size: 14px;
+          line-height: 1.6;
+          margin-bottom: 16px;
+          white-space: pre;
+        }
+
+        .feature-steps {
+          margin-top: 8px;
+        }
+
+        .feature-step-item {
+          background: #f8fafc;
+          border: 1px solid #e2e8f0;
+          border-radius: 6px;
+          padding: 10px 12px;
+          margin-bottom: 8px;
+          color: #1f2937;
+        }
+
+        .error-banner {
+          background: #e74c3c;
+          color: white;
+          padding: 15px;
+          border-radius: 6px;
+          margin-bottom: 20px;
+        }
+
+        .loading {
+          text-align: center;
+          padding: 40px;
+          color: #666;
+          font-size: 18px;
+        }
+
+        .results-container {
+          background: white;
+          border-radius: 8px;
+          padding: 30px;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .results-header {
+          margin-bottom: 20px;
+          padding-bottom: 15px;
+          border-bottom: 2px solid #e1e8ed;
+        }
+
+        .results-title {
+          font-size: 1.8rem;
+          color: #2c3e50;
+          margin-bottom: 10px;
+        }
+
+        .results-meta {
+          color: #666;
+          font-size: 14px;
+        }
+
+        .table-container {
+          overflow-x: auto;
+        }
+
+        .results-table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 20px;
+        }
+
+        .results-table th,
+        .results-table td {
+          padding: 12px;
+          text-align: left;
+          border-bottom: 1px solid #e1e8ed;
+        }
+
+        .results-table th {
+          background: #f8f9fa;
+          font-weight: 600;
+          color: #2c3e50;
+        }
+
+        .results-table tr:hover {
+          background: #f8f9fa;
+        }
+
+        .category-positive { color: #27ae60; font-weight: 600; }
+        .category-negative { color: #e74c3c; font-weight: 600; }
+        .category-edge { color: #f39c12; font-weight: 600; }
+        .category-authorization { color: #9b59b6; font-weight: 600; }
+        .category-non-functional { color: #34495e; font-weight: 600; }
+
+        .test-case-id {
+          cursor: pointer;
+          color: #3498db;
+          font-weight: 600;
+          padding: 8px 12px;
+          border-radius: 4px;
+          transition: background-color 0.2s;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .test-case-id:hover {
+          background: #f8f9fa;
+        }
+
+        .test-case-id.expanded {
+          background: #e3f2fd;
+          color: #1976d2;
+        }
+
+        .expand-icon {
+          font-size: 10px;
+          transition: transform 0.2s;
+        }
+
+        .expand-icon.expanded {
+          transform: rotate(90deg);
+        }
+
+        .expanded-details {
+          margin-top: 15px;
+          background: #fafbfc;
+          border: 1px solid #e1e8ed;
+          border-radius: 8px;
+          padding: 20px;
+        }
+
+        .step-item {
+          background: white;
+          border: 1px solid #e1e8ed;
+          border-radius: 6px;
+          padding: 15px;
+          margin-bottom: 12px;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .step-header {
+          display: grid;
+          grid-template-columns: 80px 1fr 1fr 1fr;
+          gap: 15px;
+          align-items: start;
+        }
+
+        .step-id {
+          font-weight: 600;
+          color: #2c3e50;
+          background: #f8f9fa;
+          padding: 4px 8px;
+          border-radius: 4px;
+          text-align: center;
+          font-size: 12px;
+        }
+
+        .step-description {
+          color: #2c3e50;
+          line-height: 1.5;
+        }
+
+        .step-test-data {
+          color: #666;
+          font-style: italic;
+          font-size: 14px;
+        }
+
+        .step-expected {
+          color: #27ae60;
+          font-weight: 500;
+          font-size: 14px;
+        }
+
+        .step-labels {
+          display: grid;
+          grid-template-columns: 80px 1fr 1fr 1fr;
+          gap: 15px;
+          margin-bottom: 10px;
+          font-weight: 600;
+          color: #666;
+          font-size: 12px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+      </style><div class="container"><div class="header"><h1 class="title">User Story to Tests</h1><p class="subtitle">Generate comprehensive test cases from your user stories</p></div><form class="jira-connect-form"><div class="form-group"><label for="jiraBaseUrl" class="form-label">Base URL *</label><div class="jira-row"><input id="jiraBaseUrl" type="url" class="form-input" placeholder="https://your-domain.atlassian.net" required="" value="https://poojaaroraqa.atlassian.net"><input id="jiraEmail" type="email" class="form-input" placeholder="Email ID" required="" value="pooja.aroraqa@gmail.com"><input id="jiraApiKey" type="password" class="form-input" placeholder="Jira API key" required="" value=""><button type="submit" class="jira-connect-btn">Connect Jira</button></div></div><div class="jira-status">Jira connected. 25 user stories loaded.</div></form><div class="stories-container"><h3 class="stories-title">Jira User Stories (click one to auto-fill the form)</h3><div class="table-container"><table class="results-table"><thead><tr><th>Key</th><th>Title</th><th>Status</th></tr></thead><tbody><tr class="story-row"><td>HEAL-25</td><td>Employee Profile Employee Self</td><td><span class="story-badge">In Progress</span></td></tr><tr class="story-row"><td>HEAL-24</td><td>Ahc Reports Reports Ahc</td><td><span class="story-badge">Done</span></td></tr><tr class="story-row"><td>HEAL-23</td><td>Secretary Dashboard Doctor Calender</td><td><span class="story-badge">In Progress</span></td></tr><tr class="story-row"><td>HEAL-22</td><td>Masters Others Approval Setup</td><td><span class="story-badge">To Do</span></td></tr><tr class="story-row"><td>HEAL-21</td><td>Employee Profile Basic Details</td><td><span class="story-badge">In Progress</span></td></tr><tr class="story-row"><td>HEAL-20</td><td>Doctor Dashboard Op Dashboard</td><td><span class="story-badge">In Progress</span></td></tr><tr class="story-row"><td>HEAL-19</td><td>Reports Admin Reports Others</td><td><span class="story-badge">Done</span></td></tr><tr class="story-row"><td>HEAL-18</td><td>Consultant Dashboard My Appointments</td><td><span class="story-badge">In Progress</span></td></tr><tr class="story-row"><td>HEAL-17</td><td>Billing Execution Op Bill</td><td><span class="story-badge">In Progress</span></td></tr><tr class="story-row"><td>HEAL-16</td><td>Radiology Transactions Reporting Worklist</td><td><span class="story-badge">To Do</span></td></tr><tr class="story-row"><td>HEAL-15</td><td>Reports Bb Report Home</td><td><span class="story-badge">Done</span></td></tr><tr class="story-row"><td>HEAL-14</td><td>Doctor Activities Doctor Note</td><td><span class="story-badge">Done</span></td></tr><tr class="story-row"><td>HEAL-13</td><td>Wards Dashboard View Request</td><td><span class="story-badge">Done</span></td></tr><tr class="story-row"><td>HEAL-12</td><td>Nurse Dashboard View Request</td><td><span class="story-badge">In Progress</span></td></tr><tr class="story-row"><td>HEAL-11</td><td>Daycare Dashboard View Request</td><td><span class="story-badge">Done</span></td></tr><tr class="story-row"><td>HEAL-10</td><td>Consultant Dashboard View Request</td><td><span class="story-badge">In Progress</span></td></tr><tr class="story-row"><td>HEAL-9</td><td>Radiology Transactions Front Office</td><td><span class="story-badge">Done</span></td></tr><tr class="story-row"><td>HEAL-8</td><td>Radiology Transactions Technicians Worklist</td><td><span class="story-badge">To Do</span></td></tr><tr class="story-row"><td>HEAL-7</td><td>Doctor Activities Raise Request</td><td><span class="story-badge">Done</span></td></tr><tr class="story-row"><td>HEAL-6</td><td>Nurse Activities Raise Request</td><td><span class="story-badge">Done</span></td></tr><tr class="story-row"><td>HEAL-5</td><td>Billing Execution Deposit Refund</td><td><span class="story-badge">In Progress</span></td></tr><tr class="story-row"><td>HEAL-4</td><td>Reports View Reports Others</td><td><span class="story-badge">In Progress</span></td></tr><tr class="story-row"><td>HEAL-3</td><td>Daycare Nurse Activities Raise</td><td><span class="story-badge">In Progress</span></td></tr><tr class="story-row"><td>HEAL-2</td><td>Wards Dashboard Nurse Activities</td><td><span class="story-badge">To Do</span></td></tr><tr class="story-row"><td>HEAL-1</td><td>Consultant Dashboard My Inpatients</td><td><span class="story-badge">To Do</span></td></tr></tbody></table></div></div><form class="form-container"><div class="form-group"><label for="storyTitle" class="form-label">Story Title *</label><input type="text" id="storyTitle" class="form-input" placeholder="Enter the user story title..." required="" value="Consultant Dashboard View Request"></div><div class="form-group"><label for="description" class="form-label">Description</label><textarea id="description" class="form-textarea" placeholder="Additional description (optional)...">As a user, I want to consultant dashboard view request so that the related functionality works as expected.</textarea></div><div class="form-group"><label for="acceptanceCriteria" class="form-label">Acceptance Criteria *</label><textarea id="acceptanceCriteria" class="form-textarea" placeholder="Enter the acceptance criteria..." required="">Given a user with valid access, when they open the dashboard, then relevant data and visualizations should be displayed correctly without delay.</textarea></div><div class="form-group"><label for="additionalInfo" class="form-label">Additional Info</label><textarea id="additionalInfo" class="form-textarea" placeholder="Any additional information (optional)..."></textarea></div><div class="action-buttons"><button type="submit" class="submit-btn">Generate</button><button type="button" class="feature-btn">Feature</button></div></form><div class="feature-container"><h2 class="feature-title">Generated Feature File</h2><p class="feature-subtitle">Feature steps generated from Acceptance Criteria.</p><pre class="feature-code">Feature: Consultant Dashboard View Request
+
+  Scenario: Consultant Dashboard View Request flow
+    Given a user with valid access
+    When they open the dashboard
+    Then relevant data and visualizations should be displayed correctly without delay</pre><div class="feature-steps"><div class="feature-step-item">Step 1: Given a user with valid access</div><div class="feature-step-item">Step 2: When they open the dashboard</div><div class="feature-step-item">Step 3: Then relevant data and visualizations should be displayed correctly without delay</div></div></div><div class="results-container"><div class="results-header"><h2 class="results-title">Generated Test Cases</h2><div class="results-meta">12 test case(s) generated • Model: openai/gpt-oss-120b • Tokens: 2556</div></div><div class="table-container"><table class="results-table"><thead><tr><th>Test Case ID</th><th>Title</th><th>Category</th><th>Expected Result</th></tr></thead><tbody><tr><td><div class="test-case-id "><span class="expand-icon ">▶</span>TC-001</div></td><td>Display dashboard for valid consultant user</td><td><span class="category-positive">Positive</span></td><td>Dashboard loads within 2 seconds, data matches the consultant's records, and all visualizations are displayed correctly</td></tr><tr><td><div class="test-case-id "><span class="expand-icon ">▶</span>TC-002</div></td><td>Dashboard loads with large dataset</td><td><span class="category-edge">Edge</span></td><td>Dashboard loads within 3 seconds, all records are accessible, and visualizations correctly represent the large dataset</td></tr><tr><td><div class="test-case-id "><span class="expand-icon ">▶</span>TC-003</div></td><td>Unauthorized user cannot access dashboard</td><td><span class="category-authorization">Authorization</span></td><td>User is redirected to an 'Access Denied' page or receives a 403 error message</td></tr><tr><td><div class="test-case-id "><span class="expand-icon ">▶</span>TC-004</div></td><td>Session expiration prevents dashboard access</td><td><span class="category-authorization">Authorization</span></td><td>User is redirected to the login page with a session timeout notification</td></tr><tr><td><div class="test-case-id "><span class="expand-icon ">▶</span>TC-005</div></td><td>Dashboard shows empty state when no data exists</td><td><span class="category-edge">Edge</span></td><td>Dashboard displays a friendly empty‑state message and no errors are shown</td></tr><tr><td><div class="test-case-id "><span class="expand-icon ">▶</span>TC-006</div></td><td>Dashboard performance under slow network conditions</td><td><span class="category-non-functional">Non-Functional</span></td><td>A loading indicator is shown, and the dashboard completes rendering within 5 seconds with correct data</td></tr><tr><td><div class="test-case-id "><span class="expand-icon ">▶</span>TC-007</div></td><td>Cross‑browser rendering of the dashboard</td><td><span class="category-non-functional">Non-Functional</span></td><td>Dashboard layout, data tables, and visualizations appear consistent and functional across all browsers</td></tr><tr><td><div class="test-case-id "><span class="expand-icon ">▶</span>TC-008</div></td><td>Accessibility compliance of dashboard visualizations</td><td><span class="category-non-functional">Non-Functional</span></td><td>Screen reader announces chart titles and data points correctly; full keyboard navigation is possible without loss of functionality</td></tr><tr><td><div class="test-case-id "><span class="expand-icon ">▶</span>TC-009</div></td><td>Dashboard reflects newly added request after refresh</td><td><span class="category-positive">Positive</span></td><td>The newly created request appears in the data table and any related visualizations update accordingly</td></tr><tr><td><div class="test-case-id "><span class="expand-icon ">▶</span>TC-010</div></td><td>Dashboard handles malformed data gracefully</td><td><span class="category-negative">Negative</span></td><td>Dashboard displays an error message for the affected component without crashing the entire page</td></tr><tr><td><div class="test-case-id "><span class="expand-icon ">▶</span>TC-011</div></td><td>Multiple concurrent dashboard sessions maintain isolation</td><td><span class="category-edge">Edge</span></td><td>Each session operates independently; actions in one browser do not affect the other</td></tr><tr><td><div class="test-case-id "><span class="expand-icon ">▶</span>TC-012</div></td><td>Load test: 100 concurrent users opening dashboard</td><td><span class="category-non-functional">Non-Functional</span></td><td>Average page load time remains under 3 seconds, and error rate is 0 % (no 5xx responses)</td></tr></tbody></table></div></div></div></div></div>
+    <script type="module" src="./User Story to Tests_files/main.tsx"></script>
+  
+</body><script src="chrome-extension://ojkchikaholjmcnefhjlbohackpeeknd/ptk/automationBridge.js" data-ptk-version="9.9.0" data-ptk-nonce="" data-ptk-automation-enabled="0"></script></html>
